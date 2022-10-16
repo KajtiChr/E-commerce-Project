@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UserName</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid text center">
+    <div class="d-flex p-2 bd-highlight gap-3">
+        <h2>[[${firstName}]]'s Panel</h2>
+        <a class="h2" th:href="@{/users}">Admin Panel</a>
+        <a class="h2" th:href="@{/username}">Actual Session</a>
+        <a class="h2" href="logout">Logout</a>
+    </div>
+    <div>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+            </tr>
+            </thead>
+                <tr>
+                    <td>[[${firstName}]]</td>
+                    <td>[[${lastName}]]</td>
+                    <td>[[${mail}]]</td>
+                </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
